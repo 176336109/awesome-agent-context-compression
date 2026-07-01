@@ -8,9 +8,9 @@
 
 | 文件 | 作用 |
 |------|------|
-| `packages/opencode/src/session/compaction.ts` (630行) | 压缩主逻辑 |
-| `packages/opencode/src/agent/prompt/compaction.txt` (9行) | 摘要 prompt 模板 |
-| `packages/opencode/src/session/overflow.ts` | 溢出检测 |
+| [compaction.ts](https://github.com/anomalyco/opencode/blob/51e310c9/packages/opencode/src/session/compaction.ts) (630行) | 压缩主逻辑 |
+| [compaction.txt](https://github.com/anomalyco/opencode/blob/2a33addd/packages/opencode/src/agent/prompt/compaction.txt) (9行) | 摘要 prompt 模板 |
+| [overflow.ts](https://github.com/anomalyco/opencode/blob/51e310c9/packages/opencode/src/session/overflow.ts) | 溢出检测 |
 
 ---
 
