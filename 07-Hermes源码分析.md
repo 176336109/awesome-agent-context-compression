@@ -154,3 +154,15 @@ graph TB
 3. **ContextEngine ABC** — 唯一的可插拔接口，第三方引擎可完整替换
 4. **防御性摘要前缀** — 显式禁止模型"继续执行摘要中的任务"
 5. **图片历史清理** — 唯一处理 base64 图片膨胀的系统
+
+---
+
+## 源码链接
+
+| 文件 | 说明 |
+|------|------|
+| [agent/context_engine.py](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_engine.py) | ContextEngine 抽象基类（226行） |
+| [agent/context_compressor.py](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_compressor.py) | ContextCompressor 核心算法（2426行） |
+| [agent/conversation_compression.py](https://github.com/NousResearch/hermes-agent/blob/main/agent/conversation_compression.py) | 压缩编排层 |
+
+> 仓库：[NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)

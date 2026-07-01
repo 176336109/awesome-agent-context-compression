@@ -142,3 +142,15 @@ provider 失败 → 自动 fallback 到内置 LLM 摘要。
 3. **三路径触发** — 溢出恢复 + 阈值维护 + 文件大小守卫
 4. **Successor transcript** — 压缩不覆盖原文件，创建新 successor
 5. **midTurnPrecheck** — 工具循环中也可触发压缩（opt-in）
+
+---
+
+## 源码链接
+
+| 文件 | 说明 |
+|------|------|
+| [src/agent/compaction.ts](https://github.com/openclaw/openclaw/blob/main/src/agent/compaction.ts) | 压缩主逻辑 |
+| [src/agent/pruning.ts](https://github.com/openclaw/openclaw/blob/main/src/agent/pruning.ts) | Pruning 独立系统 |
+| [src/agent/overflow.ts](https://github.com/openclaw/openclaw/blob/main/src/agent/overflow.ts) | 溢出检测与恢复 |
+
+> 仓库：[openclaw/openclaw](https://github.com/openclaw/openclaw)

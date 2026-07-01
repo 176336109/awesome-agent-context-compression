@@ -116,4 +116,16 @@ Controller.Resume():
 1. **缓存经济学驱动设计** — 不是"什么时候压缩最合理"，而是"什么时候压缩最便宜"
 2. **Cold resume prune** — 唯一在 session 恢复时主动压缩的系统
 3. **零 LLM 纯确定性裁剪** — prune 不调用任何模型
-4. **风险不对称 gate** — `cacheColdAfter: 24h`，宁可不裁剪也不使缓存失效
+4. **风险不对称 gate** — `cacheColdAfter: 24h`，宁可不裁剪也不破坏有效缓存
+
+---
+
+## 源码链接
+
+| 文件 | 说明 |
+|------|------|
+| [internal/agent/prune.go](https://github.com/esengine/reasonix/blob/main/internal/agent/prune.go) | Prune 核心逻辑 |
+| [internal/agent/compact.go](https://github.com/esengine/reasonix/blob/main/internal/agent/compact.go) | 压缩触发编排 |
+| [internal/agent/controller.go](https://github.com/esengine/reasonix/blob/main/internal/agent/controller.go) | Cold resume 入口 |
+
+> 仓库：[esengine/reasonix](https://github.com/esengine/reasonix)
