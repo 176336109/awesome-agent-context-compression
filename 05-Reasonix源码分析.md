@@ -122,10 +122,12 @@ Controller.Resume():
 
 ## 源码链接
 
-| 文件 | 说明 |
-|------|------|
-| [internal/agent/prune.go](https://github.com/esengine/reasonix/blob/main/internal/agent/prune.go) | Prune 核心逻辑 |
-| [internal/agent/compact.go](https://github.com/esengine/reasonix/blob/main/internal/agent/compact.go) | 压缩触发编排 |
-| [internal/agent/controller.go](https://github.com/esengine/reasonix/blob/main/internal/agent/controller.go) | Cold resume 入口 |
+| 文件 | Commit | 关键函数 | 行号 |
+|------|--------|---------|------|
+| [prune.go](https://github.com/esengine/DeepSeek-Reasonix/blob/main-v2/internal/agent/prune.go) | `main-v2` | `prune()` 确定性工具结果裁剪 | 全文件 |
+| [compact.go](https://github.com/esengine/DeepSeek-Reasonix/blob/main-v2/internal/agent/compact.go) | `main-v2` | 压缩摘要 + 机械折叠 fallback | 全文件 |
+| [controller.go](https://github.com/esengine/DeepSeek-Reasonix/blob/main-v2/internal/control/controller.go) | `main-v2` | `Controller.Resume()` cold resume 触发点 | 全文件 |
+| [PR #3968](https://github.com/esengine/DeepSeek-Reasonix/pull/3968) | 已合并 | prune 原始语完整实现 | — |
+| [PR #4138](https://github.com/esengine/DeepSeek-Reasonix/pull/4138) | 已合并 | compaction summary + 机械折叠 fallback | — |
 
-> 仓库：[esengine/reasonix](https://github.com/esengine/reasonix)
+> 仓库：[esengine/DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix)

@@ -159,10 +159,16 @@ graph TB
 
 ## 源码链接
 
-| 文件 | 说明 |
-|------|------|
-| [agent/context_engine.py](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_engine.py) | ContextEngine 抽象基类（226行） |
-| [agent/context_compressor.py](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_compressor.py) | ContextCompressor 核心算法（2426行） |
-| [agent/conversation_compression.py](https://github.com/NousResearch/hermes-agent/blob/main/agent/conversation_compression.py) | 压缩编排层 |
+| 文件 | 关键函数 | 行号 |
+|------|---------|------|
+| [context_engine.py](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_engine.py) | ContextEngine ABC — `compress()` 抽象方法签名 | [L87](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_engine.py#L87) |
+| 同上 | `should_compress()` 触发判断 | [L83](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_engine.py#L83) |
+| [context_compressor.py](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_compressor.py) | `SUMMARY_PREFIX` 防御性前缀 | [L43](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_compressor.py#L43) |
+| 同上 | `_summarize_tool_result()` 工具智能摘要 | [L471](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_compressor.py#L471) |
+| 同上 | `should_compress()` + 反抖动 | [L815](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_compressor.py#L815) |
+| 同上 | `_prune_old_tool_results()` 工具结果剪枝 | [L841](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_compressor.py#L841) |
+| 同上 | `_generate_summary()` LLM 摘要 | [L1500](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_compressor.py#L1500) |
+| 同上 | `_find_tail_cut_by_tokens()` tail 边界计算 | [L1900](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_compressor.py#L1900) |
+| 同上 | `compress()` 主算法入口 | [L2151](https://github.com/NousResearch/hermes-agent/blob/main/agent/context_compressor.py#L2151) |
 
 > 仓库：[NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)

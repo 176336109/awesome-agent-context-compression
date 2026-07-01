@@ -147,10 +147,16 @@ provider 失败 → 自动 fallback 到内置 LLM 摘要。
 
 ## 源码链接
 
-| 文件 | 说明 |
-|------|------|
-| [src/agent/compaction.ts](https://github.com/openclaw/openclaw/blob/main/src/agent/compaction.ts) | 压缩主逻辑 |
-| [src/agent/pruning.ts](https://github.com/openclaw/openclaw/blob/main/src/agent/pruning.ts) | Pruning 独立系统 |
-| [src/agent/overflow.ts](https://github.com/openclaw/openclaw/blob/main/src/agent/overflow.ts) | 溢出检测与恢复 |
+| 文件 | Commit | 关键函数 | 行号 |
+|------|--------|---------|------|
+| [compaction.ts](https://github.com/openclaw/openclaw/blob/9098e948/src/agents/compaction.ts) | `9098e948` | 全文件 (485行) | 1-485 |
+| 同上 | 同上 | `BASE_CHUNK_RATIO=0.4` / `SAFETY_MARGIN=1.2` | [L45](https://github.com/openclaw/openclaw/blob/9098e948/src/agents/compaction.ts#L45) |
+| 同上 | 同上 | `splitMessagesByTokenShare()` token分片 | [L88](https://github.com/openclaw/openclaw/blob/9098e948/src/agents/compaction.ts#L88) |
+| 同上 | 同上 | `chunkMessagesByMaxTokens()` 按上限分块 | [L124](https://github.com/openclaw/openclaw/blob/9098e948/src/agents/compaction.ts#L124) |
+| 同上 | 同上 | `summarizeChunks()` 逐块摘要+重试3次 | [L152](https://github.com/openclaw/openclaw/blob/9098e948/src/agents/compaction.ts#L152) |
+| 同上 | 同上 | `computeAdaptiveChunkRatio()` 自适应分块比 | [L200](https://github.com/openclaw/openclaw/blob/9098e948/src/agents/compaction.ts#L200) |
+| 同上 | 同上 | `summarizeWithFallback()` 渐进降级 | [L258](https://github.com/openclaw/openclaw/blob/9098e948/src/agents/compaction.ts#L258) |
+| 同上 | 同上 | `summarizeInStages()` 多段摘要合并 | [L335](https://github.com/openclaw/openclaw/blob/9098e948/src/agents/compaction.ts#L335) |
+| 同上 | 同上 | `pruneHistoryForContextShare()` 历史剪枝 | [L405](https://github.com/openclaw/openclaw/blob/9098e948/src/agents/compaction.ts#L405) |
 
 > 仓库：[openclaw/openclaw](https://github.com/openclaw/openclaw)
