@@ -54,11 +54,11 @@ graph TB
 
 | 你想看什么 | 去哪个文件 |
 |-----------|-----------|
-| Hermes 压缩怎么一步步做的 | [`01-Hermes压缩流程.md`](./01-Hermes压缩流程.md) |
-| 六个系统挨个对比 | [`02-六系统对比.md`](./02-六系统对比.md) |
-| 哪些设计可以借鉴复用 | [`03-可复用设计模式.md`](./03-可复用设计模式.md) |
-| Aider：代码库地图 + 分层缓存 | [`08-Aider上下文管理.md`](./08-Aider上下文管理.md) |
-| Cline：双策略压缩引擎 | [`09-Cline上下文压缩.md`](./09-Cline上下文压缩.md) |
+| Hermes 压缩怎么一步步做的 | [`flow/hermes.md`](./flow/hermes.md) |
+| 六个系统挨个对比 | [`comparison.md`](./comparison.md) |
+| 哪些设计可以借鉴复用 | [`patterns.md`](./patterns.md) |
+| Aider：代码库地图 + 分层缓存 | [`flow/aider.md`](./flow/aider.md) |
+| Cline：双策略压缩引擎 | [`flow/cline.md`](./flow/cline.md) |
 
 ---
 
